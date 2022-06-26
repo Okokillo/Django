@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <section>
+        <div class="back">
+            <form id="formSearch" action="">
+                <input id="title" type="text" placeholder="Informe o título do filme">
+                <input type="submit" value="Pesquisar">
+            </form>
+            <div class="home">
+                <h2 class="pi"><a href="{% url 'home' %}">Página Inicial</a></h2>
+                <h2><a href="{% url 'sobre' %}">Sobre</a></h2>
+            </div>
+            <div class="checkbox-container">
+                <div class="checkbox-wraper">
+                    <input type="checkbox" id="toggle">
+                    <label class="checkbox" for="toggle">
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                    </label>
+                    <div class="menu"></div>
+                    <nav class="menu-items">
+                        <ul>
+                            <li>
+                                <a href="{% url 'cadastrar_filme' %}">Cadastrar Filme</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" alt="logo.png"></a>
+    </section>
+</body>
+</html>

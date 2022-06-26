@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+
+}
+
+body {
+    background-image: url('./back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+section {
+    color: white;
+}
+
+.back {
+    position: relative;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.61);
+    height: 10vh;
+    width: cover;
+}
+
+.home {
+    position: relative;
+    top: 23px;
+    left: 60px;
+    display: flex;
+    font-size: 60%;
+    align-items: center;
+    width: 17%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home a {
+    color: white;
+    text-decoration: none;
+}
+
+.pi {
+    margin-right: 9px;
+}
+
+h2 so {
+    text-decoration: underline;
+}
+
+img {
+    position: relative;
+    top: -60px;
+    width: 60px;
+    height: 60px;
+
+}

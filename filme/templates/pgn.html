@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastrar_filme</title>
+    <link rel="stylesheet" href="{% static 'cadastrar_filme.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Cadastrar Filme</h1>
+    </div>
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="{% url 'home' %}" class="btn btn-succes">Página Inicial</a>
+    </div>
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <!-- {{form.as_p}} -->
+        <form name="form" id="form" action="/create/" method="post">
+            {% csrf_token %}
+            <div class="form-group mt-4">Modelo: {{form.titulo}}</div>
+            <div class="form-group mt-4">Gênero: {{form.genero}}</div>
+            <div class="form-group mt-4">Ano: {{form.ano}}</div>
+            <input type="submit" class="btn btn-success" value="Salvar">
+        </form>
+    </div>
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Gênero</th>
+                <th scope="col">Ano</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</body>
+</html>
